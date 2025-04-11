@@ -12,16 +12,14 @@ namespace Market_Shop.Models
         [Display(Name = "Продукт")]
         public long  ProductionId { get; set; }
         [Display(Name = "Партнер")]
-
         public long PartnersId { get; set; }
 
         [Display(Name = "Менеджер")]
-
         public long ManagerId { get; set; }
         [Display(Name = "Количество")]
-
         public long  Count { get; set; }
 
+        [Display(Name = "Стоимость")]
         [NotMapped]
         public double Price 
         {
@@ -37,21 +35,23 @@ namespace Market_Shop.Models
         }
 
         [Display(Name = "Дата")]
-
         public string Date { get; set; }
 
         [Display(Name = "Статус")]
-
         public string Status { get; set; }
 
+        [Display(Name = "Менеджер")]
 
         [ForeignKey("ManagerId")]
         [ValidateNever]
         public virtual Manager Managers { get; set; }
 
+        [Display(Name = "Партнер")]
+
         [ForeignKey("PartnersId")]
         [ValidateNever]
         public virtual Partners Partners { get; set; }
+        [Display(Name = "Продукт")]
 
         [ForeignKey("ProductionId")]
 

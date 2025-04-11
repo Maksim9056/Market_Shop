@@ -25,6 +25,7 @@ namespace Market_Shop.Models
         [Display(Name = "Минимальная ценна")]
 
         public double Min_cost_  {get;set;}
+        [Display(Name = "Тип продукта")]
 
         [ValidateNever]
         [ForeignKey("Product_typeId")]

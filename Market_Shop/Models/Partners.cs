@@ -52,6 +52,7 @@ namespace Market_Shop.Models
 
         public long Rate { get; set; }
 
+        [Display(Name = "Тип продуктов")]
 
         [ForeignKey("Patners_Type_id")]
         [ValidateNever]

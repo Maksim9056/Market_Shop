@@ -49,8 +49,8 @@ namespace Market_Shop.Controllers
         // GET: PartnerProducts/Create
         public IActionResult Create()
         {
-            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Id");
-            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Id");
+            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Patners_Type_name");
+            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Name_Product");
             return View();
         }
 
@@ -67,8 +67,8 @@ namespace Market_Shop.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Id", partnerProduct.PartnersId);
-            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Id", partnerProduct.ProductId);
+            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Patners_Type_name", partnerProduct.PartnersId);
+            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Name_Product", partnerProduct.ProductId);
             return View(partnerProduct);
         }
 
@@ -85,8 +85,8 @@ namespace Market_Shop.Controllers
             {
                 return NotFound();
             }
-            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Id", partnerProduct.PartnersId);
-            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Id", partnerProduct.ProductId);
+            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Patners_Type_name", partnerProduct.PartnersId);
+            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Name_Product", partnerProduct.ProductId);
             return View(partnerProduct);
         }
 
@@ -122,8 +122,8 @@ namespace Market_Shop.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Id", partnerProduct.PartnersId);
-            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Id", partnerProduct.ProductId);
+            ViewData["PartnersId"] = new SelectList(_context.Partners, "Id", "Patners_Type_name", partnerProduct.PartnersId);
+            ViewData["ProductId"] = new SelectList(_context.Product, "Id", "Name_Product", partnerProduct.ProductId);
             return View(partnerProduct);
         }
 
