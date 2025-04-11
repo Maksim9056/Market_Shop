@@ -143,7 +143,7 @@ $.extend( $.fn, {
 	// https://jqueryvalidation.org/rules/
 	rules: function( command, argument ) {
 		var element = this[ 0 ],
-			isContentEditable = typeof this.attr( "contenteditable" ) !== "undefined" && this.attr( "contenteditable" ) !== "false",
+			isContentРедактироватьable = typeof this.attr( "contenteditable" ) !== "undefined" && this.attr( "contenteditable" ) !== "false",
 			settings, staticRules, existingRules, data, param, filtered;
 
 		// If nothing is selected, return empty object; can't chain anyway
@@ -151,7 +151,7 @@ $.extend( $.fn, {
 			return;
 		}
 
-		if ( !element.form && isContentEditable ) {
+		if ( !element.form && isContentРедактироватьable ) {
 			element.form = this.closest( "form" )[ 0 ];
 			element.name = this.attr( "name" );
 		}
@@ -419,10 +419,10 @@ $.extend( $.validator, {
 			} );
 
 			function delegate( event ) {
-				var isContentEditable = typeof $( this ).attr( "contenteditable" ) !== "undefined" && $( this ).attr( "contenteditable" ) !== "false";
+				var isContentРедактироватьable = typeof $( this ).attr( "contenteditable" ) !== "undefined" && $( this ).attr( "contenteditable" ) !== "false";
 
 				// Set form expando on contenteditable
-				if ( !this.form && isContentEditable ) {
+				if ( !this.form && isContentРедактироватьable ) {
 					this.form = $( this ).closest( "form" )[ 0 ];
 					this.name = $( this ).attr( "name" );
 				}
@@ -656,14 +656,14 @@ $.extend( $.validator, {
 			.not( this.settings.ignore )
 			.filter( function() {
 				var name = this.name || $( this ).attr( "name" ); // For contenteditable
-				var isContentEditable = typeof $( this ).attr( "contenteditable" ) !== "undefined" && $( this ).attr( "contenteditable" ) !== "false";
+				var isContentРедактироватьable = typeof $( this ).attr( "contenteditable" ) !== "undefined" && $( this ).attr( "contenteditable" ) !== "false";
 
 				if ( !name && validator.settings.debug && window.console ) {
 					console.error( "%o has no name assigned", this );
 				}
 
 				// Set form expando on contenteditable
-				if ( isContentEditable ) {
+				if ( isContentРедактироватьable ) {
 					this.form = $( this ).closest( "form" )[ 0 ];
 					this.name = name;
 				}
@@ -718,7 +718,7 @@ $.extend( $.validator, {
 		elementValue: function( element ) {
 			var $element = $( element ),
 				type = element.type,
-				isContentEditable = typeof $element.attr( "contenteditable" ) !== "undefined" && $element.attr( "contenteditable" ) !== "false",
+				isContentРедактироватьable = typeof $element.attr( "contenteditable" ) !== "undefined" && $element.attr( "contenteditable" ) !== "false",
 				val, idx;
 
 			if ( type === "radio" || type === "checkbox" ) {
@@ -727,7 +727,7 @@ $.extend( $.validator, {
 				return element.validity.badInput ? "NaN" : $element.val();
 			}
 
-			if ( isContentEditable ) {
+			if ( isContentРедактироватьable ) {
 				val = $element.text();
 			} else {
 				val = $element.val();
@@ -788,7 +788,7 @@ $.extend( $.validator, {
 			if ( normalizer ) {
 				val = normalizer.call( element, val );
 
-				// Delete the normalizer from rules to avoid treating it as a pre-defined method.
+				// Удалить the normalizer from rules to avoid treating it as a pre-defined method.
 				delete rules.normalizer;
 			}
 

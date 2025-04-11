@@ -7,14 +7,15 @@ namespace Market_Shop.Models
     public class PartnerProduct
     {
         public long Id { get; set; }
-        [Display(Name = "Patners_Type_name")]
+        [Display(Name = "Название партнера")]
 
         public long PartnersId { get; set; }
 
-        [Display(Name = "Name_Product")]
+        [Display(Name = "Название продукта")]
 
         public long ProductId { get; set; }
 
+        [Display(Name = "Количество")]
 
         public long Count { get; set; }
 

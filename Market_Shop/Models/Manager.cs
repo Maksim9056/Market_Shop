@@ -9,10 +9,12 @@ namespace Market_Shop.Models
         public long Id { get; set; }
 
 
-        [Display(Name = "FullName")]
+        [Display(Name = "Полное ФИО")]
         public string FullName { get; set; }
+        [Display(Name = "Телефон или  почта")]
 
         public string Contact { get; set; }
+        [Display(Name = "Пароль")]
 
         public string Password { get; set; }
 

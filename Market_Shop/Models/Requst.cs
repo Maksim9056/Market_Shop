@@ -9,15 +9,16 @@ namespace Market_Shop.Models
     {
         public long Id { get; set; }
 
-        [Display(Name = "Name_Product")]
+        [Display(Name = "Продукт")]
         public long  ProductionId { get; set; }
-        [Display(Name = "Patners_Type_name")]
+        [Display(Name = "Партнер")]
 
         public long PartnersId { get; set; }
 
-        [Display(Name = "FullName")]
+        [Display(Name = "Менеджер")]
 
         public long ManagerId { get; set; }
+        [Display(Name = "Количество")]
 
         public long  Count { get; set; }
 
@@ -35,11 +36,13 @@ namespace Market_Shop.Models
             }
         }
 
+        [Display(Name = "Дата")]
 
-        public  string Date { get; set; }
+        public string Date { get; set; }
 
+        [Display(Name = "Статус")]
 
-        public  string Status { get; set; }
+        public string Status { get; set; }
 
 
         [ForeignKey("ManagerId")]

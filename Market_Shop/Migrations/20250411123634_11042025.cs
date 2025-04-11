@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Market_Shop.Migrations
 {
     /// <inheritdoc />
-    public partial class news : Migration
+    public partial class _11042025 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

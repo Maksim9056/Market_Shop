@@ -1,13 +1,13 @@
 ﻿@model Market_Shop.Models.Requst
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Детально";
 }
 
-<h1>Details</h1>
+<h1>Детально</h1>
 
 <div>
-    <h4>Requst</h4>
+    <h4>Заявка</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -49,6 +49,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Редактировать</a> |
+    <a asp-action="Index">Вернуться в список</a>
 </div>

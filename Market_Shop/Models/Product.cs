@@ -10,15 +10,20 @@ namespace Market_Shop.Models
         public long Id { get; set; }
 
 
-        [Display(Name = "Product_types")]
+        [Display(Name = "Тип продукта")]
 
         public long Product_typeId { get; set; }
+        [Display(Name = "Название продукта")]
+
         public string Name_Product { get; set; }
+        [Display(Name = "Артикул")]
 
         public long Артикул { get; set; }
 
 
         //[UIHint("String")]
+        [Display(Name = "Минимальная ценна")]
+
         public double Min_cost_  {get;set;}
 
         [ValidateNever]

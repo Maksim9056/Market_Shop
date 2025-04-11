@@ -8,21 +8,30 @@ namespace Market_Shop.Models
     [DisplayName("Patners_types")]
     public class Partners
     {
+        [Display(Name = "Код")]
+
         public long Id { get; set; }
-        [Display(Name = "Patners_types")]
+        [Display(Name = "Тип продуктов")]
         public long Patners_Type_id { get; set; }
+        [Display(Name = "Название партнера")]
 
         public string Patners_Type_name { get; set; }
+        [Display(Name = "Директор")]
+
         public string Director { get; set; }
 
+        [Display(Name ="Почта")]
         [EmailAddress]
         public string Email { get; set; }
 
+        [Display(Name ="Телефон")]
         [Phone]
         public string Phone { get; set; }
 
+        [Display(Name ="Адрес партнера")]
         public string Addres_Partners { get; set; }
 
+        [Display(Name = "Скидка партнера")]
 
         [NotMapped]
         public long Discount
@@ -36,8 +45,11 @@ namespace Market_Shop.Models
 
             }
         }
+        [Display(Name = "ИНН")]
 
         public string INN { get; set; }
+        [Display(Name = "Рейтинг")]
+
         public long Rate { get; set; }
 
 
